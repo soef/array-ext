@@ -1,6 +1,6 @@
 ###Some Array Extensions 
 
-[![NPM version](http://img.shields.io/npm/v/array-ext.svg)](https://www.npmjs.com/package/soef)
+[![NPM version](http://img.shields.io/npm/v/array-ext.svg)](https://www.npmjs.com/package/array-ext)
 [![Tests](http://img.shields.io/travis/soef/array-ext/master.svg)](https://travis-ci.org/soef/soef)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/soef/array-ext/blob/master/LICENSE)
 
