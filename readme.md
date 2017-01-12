@@ -51,7 +51,6 @@ arr1.contains('ip', arr2); // true
 // push an entry if not already in
 arr.add(128); //
 
-
 //remove 
 arr.removeDup(128); // will remove entry 128
 
