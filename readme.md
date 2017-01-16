@@ -4,14 +4,14 @@
 [![Tests](http://img.shields.io/travis/soef/array-ext/master.svg)](https://travis-ci.org/soef/array-ext)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/soef/array-ext/blob/master/LICENSE)
 
-####Example:
+####Examples:
 
 ```js
 var arrayExt = require('array-ext');
 
 var arr = [128, 255, 255];
 
-arr.toHex(); // 80 ff
+arr.toHex(); // 80 ff ff
 
 //Compare
 arr.eq([128, 255]); // true

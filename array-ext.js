@@ -27,8 +27,16 @@ if ([].find === undefined) {
     }
 }
 
-Array.prototype.forEachCallback = function forEachCallback (readyCallback, func) {
-    return njs.forEachArrayCallback(this, readyCallback, func);
+Array.prototype.forEachCallback = function forEachCallback (func, readyCallback) {
+    var cnt = -1, len = this.length;
+    
+    function doit() {
+        if (++cnt >= len) {
+            return readyCallback && readyCallback();
+        }
+        func(arr[cnt], doit);
+    }
+    doit();
 };
 Array.prototype.toHex = function () {
     return arrayToHex(this);
