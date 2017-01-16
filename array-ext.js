@@ -28,14 +28,14 @@ if ([].find === undefined) {
 }
 
 Array.prototype.forEachCallback = function forEachCallback (func, readyCallback) {
-    var cnt = -1, len = this.length;
+    var cnt = -1, len = this.length, self = this;
     
     function next() {
         if (++cnt >= len) {
             return readyCallback && readyCallback();
         }
         //func(arr[cnt], doit);
-        func(next, this[cnt], cnt, this);
+        func(next, self[cnt], cnt, self);
     }
     next();
 };
