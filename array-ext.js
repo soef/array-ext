@@ -30,13 +30,14 @@ if ([].find === undefined) {
 Array.prototype.forEachCallback = function forEachCallback (func, readyCallback) {
     var cnt = -1, len = this.length;
     
-    function doit() {
+    function next() {
         if (++cnt >= len) {
             return readyCallback && readyCallback();
         }
-        func(arr[cnt], doit);
+        //func(arr[cnt], doit);
+        func(next, arr[cnt], cnt, this);
     }
-    doit();
+    next();
 };
 Array.prototype.toHex = function () {
     return arrayToHex(this);
