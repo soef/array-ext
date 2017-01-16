@@ -35,7 +35,7 @@ Array.prototype.forEachCallback = function forEachCallback (func, readyCallback)
             return readyCallback && readyCallback();
         }
         //func(arr[cnt], doit);
-        func(next, arr[cnt], cnt, this);
+        func(next, this[cnt], cnt, this);
     }
     next();
 };
